@@ -12,7 +12,7 @@
 
 ## Code
 
-The script processes the **Sales Data** from a multi-sheet Excel workbook and performs feature engineering to analyze average and maximum sales per day. Below is a breakdown of the steps:
+The script processes the **Sales Data** from an Excel workbook and performs feature engineering to analyze average and maximum sales per day. Below is a breakdown of the steps:
 
 1. Importing Required Libraries
 ```python
@@ -22,7 +22,7 @@ We use Pandas for data loading, cleaning, and manipulation.
 
 2. Load Sales Data from Excel
 ```python
-df_sales = pd.read_excel('/Users/adlnzmnzr/Downloads/Dynamic Inventory Analytics.xlsx', sheet_name='Sales Data')
+df_sales = pd.read_excel('/Users/adlnzmnzr/Desktop/sales_data.xlsx')
 ```
 Loads the "Sales Data" sheet from the Excel file into a Pandas DataFrame.
 
