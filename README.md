@@ -1,5 +1,17 @@
 # Sales Data Preprocessing & Feature Engineering
 
+## Dataset
+- **Rows:** 33,919
+- **Columns:** 13
+- **Purpose:** This dataset seems to be the **raw export** or unprocessed version.
+- **Issues Identified:**
+  - Contains **5 unnamed columns** (`Unnamed: 8` to `Unnamed: 12`) with mostly null values.
+  - Mixed formatting in column names (e.g., `Order Number`, `SKU ID`, etc.).
+  - No computed fields like averages or max metrics.
+  - Some columns like `Order Quantity` are floats, possibly due to inconsistent data entry.
+
+## Code
+
 The script processes the **Sales Data** from a multi-sheet Excel workbook and performs feature engineering to analyze average and maximum sales per day. Below is a breakdown of the steps:
 
 1. Importing Required Libraries
@@ -49,3 +61,17 @@ df_sales['max_sales_per_day'] = df_sales.groupby(['sku_id', 'warehouse_id', 'ord
 - `max_sales_per_day`: Computes the maximum daily sales per SKU per warehouse.
 
 These engineered features can be used for demand forecasting, stock optimization, or further analysis.
+
+## Clean Dataset
+- **Rows:** 33,919
+- **Columns:** 10
+- **Purpose:** This dataset appears to be the **cleaned and processed** version of the raw sales data.
+- **Clean Features:**
+  - Proper column names (e.g., `order_date`, `sku_id`, etc. in lowercase and with underscores).
+  - No extra or unnamed columns.
+  - All data types are correct and consistent.
+- **Additional Metrics Added:**
+  - `avg_sales_per_day`
+  - `max_sales_per_day`
+
+These are **calculated metrics** not found in the raw dataset, likely derived during data cleaning/analysis.
